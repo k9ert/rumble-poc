@@ -1,0 +1,29 @@
+# OpenStack Authentication
+# Get these from your Rumble Cloud dashboard
+auth_url                      = "https://keystone.rumble.cloud/"
+application_credential_id     = "00000EXAMPLE000000000000"
+application_credential_secret = "EXAMPLESECRETKEY"
+region                        = "RegionOne"
+
+# Cluster Configuration
+cluster_name        = "my-k8s-cluster"
+template_name       = "my-k8s-template"
+keypair_name        = "my-keypair"
+external_network_id = "public"
+
+# Node Configuration (minimum cluster: 1 master + 1 worker)
+node_count    = 1
+master_count  = 1
+flavor        = "s1a.small"
+master_flavor = "s1a.small"
+
+# Networking
+network_driver = "flannel"  # or "calico"
+dns_nameserver = "8.8.8.8"
+
+# Kubernetes Version
+kubernetes_version = "v1.28.3"
+
+# Environment
+environment = "development"
+

@@ -1,0 +1,19 @@
+# Terraform files
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+!terraform.tfvars.example
+
+# Kubeconfig files
+config
+*.kubeconfig
+
+# OS files
+.DS_Store
+
+# Nix
+result
+
+.direnv
