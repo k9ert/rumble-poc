@@ -1,6 +1,6 @@
 # OpenStack Authentication
 # Get these from your Rumble Cloud dashboard
-auth_url                      = "https://keystone.rumble.cloud/"
+auth_url                      = "https://identity.us-west-1.rumble.cloud/v3"
 application_credential_id     = "00000EXAMPLE000000000000"
 application_credential_secret = "EXAMPLESECRETKEY"
 region                        = "RegionOne"

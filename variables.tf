@@ -33,7 +33,7 @@ variable "template_name" {
 variable "image" {
   description = "OS image for cluster nodes"
   type        = string
-  default     = "fedora-coreos-latest"
+  default     = "FedoraCoreOS-38"
 }
 
 variable "coe" {
