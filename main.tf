@@ -33,21 +33,10 @@ resource "openstack_containerinfra_clustertemplate_v1" "k8s_template" {
   public                = false
   tls_disabled          = false
   registry_enabled      = false
-  master_lb_enabled     = true
-  floating_ip_enabled   = true
+  master_lb_enabled     = false
+  floating_ip_enabled   = false
 
-  labels = {
-    kube_tag                      = var.kubernetes_version
-    cloud_provider_tag            = "v1.28.0"
-    cloud_provider_enabled        = "true"
-    auto_healing_enabled          = "true"
-    auto_scaling_enabled          = "false"
-    monitoring_enabled            = "true"
-    auto_healing_controller       = "magnum-auto-healer"
-    magnum_auto_healer_tag        = "v1.28.0"
-    master_lb_floating_ip_enabled = "true"
-    cinder_csi_enabled            = "true"
-  }
+  labels = {}
 }
 
 # Create a Kubernetes Cluster
