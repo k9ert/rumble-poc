@@ -23,68 +23,9 @@ variable "region" {
   default     = "RegionOne"
 }
 
-# Cluster Template Variables
-variable "template_name" {
-  description = "Name of the cluster template"
-  type        = string
-  default     = "kubernetes-template"
-}
-
-variable "image" {
-  description = "OS image for cluster nodes"
-  type        = string
-  default     = "FedoraCoreOS-38"
-}
-
-variable "coe" {
-  description = "Container orchestration engine"
-  type        = string
-  default     = "kubernetes"
-}
-
-variable "flavor" {
-  description = "Flavor for worker nodes"
-  type        = string
-  default     = "s1a.small"
-}
-
-variable "master_flavor" {
-  description = "Flavor for master nodes"
-  type        = string
-  default     = "s1a.small"
-}
-
-variable "external_network_id" {
-  description = "External network ID or name"
-  type        = string
-  default     = "public"
-}
-
-variable "network_driver" {
-  description = "Network driver (flannel or calico)"
-  type        = string
-  default     = "flannel"
-}
-
-variable "volume_driver" {
-  description = "Volume driver"
-  type        = string
-  default     = "cinder"
-}
-
-variable "dns_nameserver" {
-  description = "DNS nameserver for the cluster"
-  type        = string
-  default     = "8.8.8.8"
-}
-
-variable "kubernetes_version" {
-  description = "Kubernetes version tag"
-  type        = string
-  default     = "v1.28.3"
-}
-
 # Cluster Variables
+# Note: Using standard template "Standard-v2.0-k8s-calico-fc38_v1.24.16"
+# Template configuration (image, network driver, etc.) is managed by Rumble Cloud
 variable "cluster_name" {
   description = "Name of the Kubernetes cluster"
   type        = string
